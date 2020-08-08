@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../app.service';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 @Component({
   selector: 'app-recipe-list',
   templateUrl: './recipe-list.component.html',
@@ -112,7 +113,7 @@ export class RecipeListComponent implements OnInit {
 }
 ]
   path = "http://starlord.hackerearth.com/recipe"
-  constructor(private apiService : AppService) { 
+  constructor(private apiService : AppService, private router: Router) { 
        this.data.forEach(function (element) {
   element["favourite"] = false;
 });
@@ -134,6 +135,10 @@ export class RecipeListComponent implements OnInit {
 
 addFavourite(type) {
   type.favourite = !type
+}
+
+viewDetails(id) {
+    this.router.navigate(['/recipt-details/'+id]);
 }
 
 }

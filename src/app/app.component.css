@@ -8,4 +8,18 @@
 body {
   margin: 0;
   /* font-family: Arial; */
+  background-image: url(img_flwr.gif), url(paper.gif);
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, repeat;
+}
+
+.search-header {
+  display: flex;
+  justify-content: center
+}
+
+.searchBar {
+  border: none;
+  outline: none;
+  width: 200px;
 }

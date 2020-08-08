@@ -1,15 +1,10 @@
-<div class="search-header">
-  <img src="./assets/icon/Icon feather-search.png" alt="searchIcon">
-  <input class="searchBar" [(ngModel)]="searchByRecipe" placeholder="Search your favourite recipe..."> 
-</div>
-
 <div>
   <div *ngFor="let cat of categories">
     <div style="text-align:right"><h1>{{cat | titlecase}}</h1></div>
   <div class="app">
       <div class="item" *ngFor="let item of filterItemsOfType(cat)"  style= "background: linear-gradient(to bottom,transparent,transparent,black,black), url({{item.image}});">
         <div class="item-label">
-          <div>{{item.label ? (item.label | titlecase ): "test" | titlecase}}</div></div>
+          <div>{{item.label ? (item.label | titlecase ): "Fusion" | titlecase}}</div></div>
           <div class="item-content">
             <div class="item-content-top">
               <div>
@@ -27,7 +22,7 @@
              <div class="overlay">
       </div>
       <div class="button-container"> 
-       <button class="button">View More</button>
+       <button class="button" (click)="viewDetails(item.id)">View Details</button>
        <br>
        <br>
        <button class="button">Quick View</button>

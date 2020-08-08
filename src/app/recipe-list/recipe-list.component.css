@@ -1,13 +1,4 @@
-.search-header {
-  display: flex;
-  justify-content: center
-}
 
-.searchBar {
-  border: none;
-  outline: none;
-  width: 200px;
-}
 .app {
   display: grid;
   grid-gap: 15px; 
@@ -72,7 +63,6 @@ border-top-right-radius: 10px
   border-radius:10px;
 }
 .item:hover {
-  cursor: pointer;
 }
 .item:hover .overlay {
   display: block;
@@ -101,4 +91,6 @@ button {
   border:.5px solid;
   background: inherit;
   color:white;
+  cursor: pointer;
+
 }

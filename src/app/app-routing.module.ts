@@ -7,7 +7,7 @@ import { RecipeDetailsComponent } from './recipe-details/recipe-details.componen
 
 const routes: Routes = [
   {path: 'recipeList', component: RecipeListComponent},
-   { path: 'recipt-details/:id', component: RecipeDetailsComponent},
+  { path: 'recipt-details/:id', component: RecipeDetailsComponent},
   {path: '404',  component: PageNotFoundComponent},
   {path: '', redirectTo:'/recipeList', pathMatch: 'full',},
   {path: '**', redirectTo: '/404'},
