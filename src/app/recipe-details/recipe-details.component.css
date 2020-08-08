@@ -1,0 +1,12 @@
+.recipe-details-container {
+  display: flex;
+}
+.recipe-det-left {
+  display: flex;
+  flex-direction: column
+}
+.recipe-det-right {
+display: flex;
+flex-direction: column
+
+}

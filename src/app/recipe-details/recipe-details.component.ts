@@ -11,5 +11,7 @@ export class RecipeDetailsComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  goBack() {
+     window.history.back();
+  }
 }
