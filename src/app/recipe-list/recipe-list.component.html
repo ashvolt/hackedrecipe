@@ -11,11 +11,33 @@
         <div class="item-label">
           <div>{{item.label ? (item.label | titlecase ): "test" | titlecase}}</div></div>
           <div class="item-content">
-            <div>
-            <h1>{{item.name | titlecase}}</h1>
+            <div class="item-content-top">
+              <div>
+               <h1>{{item.name | titlecase}}</h1>
+               <img src="./assets/icon/Icon feather-clock.png" alt="time">20 mins
+              </div>
+            <div (click)="addFavourite(item)">
+              <img  src="./assets/icon/Icon feather-heart-color.png" alt="favourite">
+              <img  src="./assets/icon/Icon feather-heart.png" alt="notFavourite">
             </div>
-          </div>
+            </div>
+            <div class="item-content-bottom">
+              {{item.description}}
+            </div>
+             <div class="overlay">
       </div>
+      <div class="button-container"> 
+       <button class="button">View More</button>
+       <br>
+       <br>
+       <button class="button">Quick View</button>
+       </div>
+          </div>
+      
+      
+      
+      </div>
+     
   </div>
   </div>
 </div>

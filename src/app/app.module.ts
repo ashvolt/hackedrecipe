@@ -8,9 +8,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { AppService } from './app.service'
 import { HttpClientModule } from '@angular/common/http';
+import { MaterialModule } from './material/material.module';
+import { RecipeDetailsComponent } from './recipe-details/recipe-details.component';
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,AppRoutingModule, HttpClientModule ],
-  declarations: [ AppComponent, PageNotFoundComponent, RecipeListComponent ],
+  imports:      [ BrowserModule, FormsModule,AppRoutingModule, HttpClientModule, MaterialModule ],
+  declarations: [ AppComponent, PageNotFoundComponent, RecipeListComponent, RecipeDetailsComponent ],
   bootstrap:    [ AppComponent ],
   providers: [AppService]
 })

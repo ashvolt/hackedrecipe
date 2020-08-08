@@ -112,7 +112,11 @@ export class RecipeListComponent implements OnInit {
 }
 ]
   path = "http://starlord.hackerearth.com/recipe"
-  constructor(private apiService : AppService) { }
+  constructor(private apiService : AppService) { 
+       this.data.forEach(function (element) {
+  element["favourite"] = false;
+});
+  }
 
   ngOnInit() {
     this.categories = this.data.map(value => value.category)
@@ -120,10 +124,16 @@ export class RecipeListComponent implements OnInit {
     // this.apiService.get(this.path).subscribe (
     //   result => console.log(result)
     // );
+    console.log(this.data)
+ 
   }
 
   filterItemsOfType(type){
     return this.data.filter(x => x.category == type);
+}
+
+addFavourite(type) {
+  type.favourite = !type
 }
 
 }
