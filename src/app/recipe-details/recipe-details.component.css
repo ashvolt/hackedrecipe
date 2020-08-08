@@ -10,3 +10,8 @@ display: flex;
 flex-direction: column
 
 }
+
+.image-container {
+  width:100%;
+  height:400px;
+}

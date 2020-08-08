@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-recipe-details',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recipe-details.component.css']
 })
 export class RecipeDetailsComponent implements OnInit {
-
-  constructor() { }
+recipeItem = { "id":"",
+      "name":"",
+      "image":"",
+      "category":"",
+      "label":"",
+      "price":"",
+      "description":""}
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit() {
+    this.sharedService.getBehaviorView().subscribe(v => {
+      this.recipeItem = v;
+})
   }
   goBack() {
      window.history.back();

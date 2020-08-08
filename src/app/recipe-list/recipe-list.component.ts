@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../app.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { SharedService } from '../shared.service';
 @Component({
   selector: 'app-recipe-list',
   templateUrl: './recipe-list.component.html',
@@ -113,7 +114,7 @@ export class RecipeListComponent implements OnInit {
 }
 ]
   path = "http://starlord.hackerearth.com/recipe"
-  constructor(private apiService : AppService, private router: Router) { 
+  constructor(private apiService : AppService, private router: Router,private sharedService: SharedService) { 
        this.data.forEach(function (element) {
   element["favourite"] = false;
 });
@@ -137,8 +138,9 @@ addFavourite(type) {
   type.favourite = !type
 }
 
-viewDetails(id) {
-    this.router.navigate(['/recipt-details/'+id]);
+viewDetails(item) {
+    this.sharedService.setBehaviorView(item)
+    this.router.navigate(['/recipt-details/'+item.id]);
 }
 
 }

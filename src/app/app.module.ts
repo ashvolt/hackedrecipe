@@ -10,11 +10,12 @@ import { AppService } from './app.service'
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material/material.module';
 import { RecipeDetailsComponent } from './recipe-details/recipe-details.component';
+import { SharedService } from './shared.service';
 @NgModule({
   imports:      [ BrowserModule, FormsModule,AppRoutingModule, HttpClientModule, MaterialModule ],
   declarations: [ AppComponent, PageNotFoundComponent, RecipeListComponent, RecipeDetailsComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [AppService]
+  providers: [AppService, SharedService]
 })
 export class AppModule { }
 
