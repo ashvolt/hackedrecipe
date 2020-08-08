@@ -1,0 +1,8 @@
+{
+  "/recipeApi/*": {
+    "target": "http://starlord.hackerearth.com/recipe",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}
+

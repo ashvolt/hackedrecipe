@@ -1,3 +1,11 @@
-p {
+/* html {
   font-family: Lato;
+} */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  /* font-family: Arial; */
 }

@@ -10,9 +10,13 @@ export class AppService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public get(path: string, params): Observable<any> {
-    return this.httpClient.get(path);
+  public get(path: string): Observable<any> {
+    return this.httpClient.get(path).pipe(catchError(this.formatErrors));
       ;
+  }
+
+    public formatErrors(error: any): Observable<any> {
+    return throwError(error.error);
   }
 
 }
